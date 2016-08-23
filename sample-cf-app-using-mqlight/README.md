@@ -12,3 +12,13 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application base
 6. Access the running app in a browser at http://localhost:6001
 
 [Install Node.js]: https://nodejs.org/en/download/
+
+## Run the app on Bluemix
+
+1. cf push sample-cf-app-using-mqlight
+
+   Add the following environment variables to the app:
+      MQ_SERVER: The secure gateway’s cloud host
+      MQ_PORT: The secure gateway’s cloud port
+      MQ_USER: user
+      MQ_PASSWORD: password

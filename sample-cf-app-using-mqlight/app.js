@@ -23,15 +23,15 @@ var appEnv = cfenv.getAppEnv();
 
 //
 var mqlight = require('mqlight');
-var mq_server = process.env.MQ_SERVER;
-var mq_port = process.env.MQ_PORT;
-var mq_user = process.env.MQ_USER;
-var mq_password = process.env.MQ_PASSWORD;
-if(appEnv.isLocal == true) {
-  mq_server = 'localhost';
-  mq_port = '5672';
-  mq_user = 'user';
-  mq_password = 'password';
+var mq_server = 'localhost';
+var mq_port = '5672';
+var mq_user = 'user';
+var mq_password = 'password';
+if(appEnv.isLocal == false) {
+  mq_server = process.env.MQ_SERVER;
+  mq_port = process.env.MQ_PORT;
+  mq_user = process.env.MQ_USER;
+  mq_password = process.env.MQ_PASSWORD;
 }
 var service = "amqp://" + mq_user + ":" + mq_password
                         + "@" + mq_server + ":" + mq_port;
