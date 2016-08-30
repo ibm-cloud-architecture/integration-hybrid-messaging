@@ -1,0 +1,8 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: edwinvandegriftusibmcom-mobileweb.apic.mybluemix.net
+  name: mqlight-sample
+  host: mqlight-sample
+  disk_quota: 1024M
