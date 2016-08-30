@@ -14,10 +14,10 @@ TO-DO: Add an solution overview diagram.
 
 1. FTP Secure Gateway Client installation package to /tmp directory
 2. cd /tmp
-3. rpm -ivhf <file-name>.rpm
+3. rpm -ivhf [file-name].rpm
 4. Start the client (after defining the Secure Gateway on Bluemix):
    1. cd /opt/ibm/securegateway/client
-   2. node lib/secgwclient.js <gateway-id> --t <security-token>
+   2. node lib/secgwclient.js [gateway-id] --t [security-token]
    3. acl allow :5672
 
 ## Run the app on Bluemix
