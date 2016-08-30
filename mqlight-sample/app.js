@@ -15,22 +15,13 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
-//app.get('/', function (req, res) {
-//  //res.send('GET request to homepage');
-//  console.log('sendClient.state: %s', sendClient.state);
-//});
-
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-//var mq_server = 'localhost';
-//var mq_port = '5672';
-//var mq_user = 'user';
-//var mq_password = 'password';
-var mq_server = '169.55.213.232';
+var mq_server = 'localhost';
 var mq_port = '5672';
-var mq_user = 'mqm';
-var mq_password = 'Fqp4Gs4k';
+var mq_user = 'user';
+var mq_password = 'password';
 if(appEnv.isLocal == false) {
   mq_server = process.env.MQ_SERVER;
   mq_port = process.env.MQ_PORT;
