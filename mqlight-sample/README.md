@@ -1,6 +1,14 @@
-# Node.js Starter Overview
+# IBM Cloud Hybrid Messaging Reference Implementation
 
-The Node.js Starter demonstrates a simple, reusable Node.js web application based on the Express framework.
+## Solution Overview
+
+This project provides end-to-end reference implemenation to demonstrate how to implement hybrid messaging that connects public cloud to on-prem system via secure messaging solution. It uses Bluemix Secure Gateway to communicate to MQ deployed on a SoftLayer VM image (mimick on-prem deployment)
+
+The project also provides a simple Node.js application that publishes and subscribes to the MQ topics via MQLite protocal. It is deployed to Bluemix as a Cloud Foundry application. 
+
+TO-DO: Add an solution overview diagram.
+
+## Setup the MQ on SoftLayer
 
 ## Run the app locally
 
