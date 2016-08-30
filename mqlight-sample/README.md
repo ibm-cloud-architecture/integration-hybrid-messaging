@@ -17,7 +17,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application base
 
 1. Download and extract the code
 2. cd into the app directory
-3. cf push sample-cf-app-using-mqlight
+3. cf push mqlight-sample
 4. Create a Secure Gateway service, and define a gateway to connect to the
    remote MQ server.
 5. Add the following environment variables to the sample app:
