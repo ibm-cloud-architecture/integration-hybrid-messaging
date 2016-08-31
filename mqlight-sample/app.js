@@ -41,7 +41,7 @@ sendClient.on('error', function(error) {
     if (error) {
       if (error.message) console.error('message: %s', error.toString());
       else if (error.stack) console.error(error.stack);
-      sendClient.stop();
+      //sendClient.stop();
     }
 });
 
