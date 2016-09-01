@@ -22,6 +22,10 @@ var mq_server = 'localhost';
 var mq_port = '5672';
 var mq_user = 'user';
 var mq_password = 'password';
+mq_server = '169.55.213.232';
+mq_port = '5672';
+mq_user = 'mqm';
+mq_password = 'Fqp4Gs4k';
 if(appEnv.isLocal == false) {
   mq_server = process.env.MQ_SERVER;
   mq_port = process.env.MQ_PORT;

@@ -10,14 +10,18 @@ TO-DO: Add an solution overview diagram.
 
 ## Setup the MQ on SoftLayer
 
+Install a version of MQ on the SoftLayer VM that supports AMQP.
+Create and start a Queue Manager.
+Create and start the AMQP service.
+
 ## Setup the Secure Gateway client on SoftLayer
 
 1. FTP Secure Gateway Client installation package to /tmp directory
 2. cd /tmp
-3. rpm -ivhf [file-name].rpm
+3. rpm -ivhf <file-name>.rpm
 4. Start the client (after defining the Secure Gateway on Bluemix):
    1. cd /opt/ibm/securegateway/client
-   2. node lib/secgwclient.js [gateway-id] --t [security-token]
+   2. node lib/secgwclient.js <gateway-id> --t <security-token>
    3. acl allow :5672
 
 ## Run the app on Bluemix
