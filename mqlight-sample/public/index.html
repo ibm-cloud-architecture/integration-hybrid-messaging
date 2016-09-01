@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>MQLight Sample</title>
+    <title>Hybrid Messaging Sample</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,11 +10,34 @@
   </head>
 
   <body>
-    <button type="button"
+    <table>
+      <tr>
+        <td style= "width:30%;">
+          <img class = "newappIcon" src="images/newapp-icon.png">
+        </td>
+        <td>
+            <h1>Hybrid Messaging Sample</h1>
+            <p>The sample application demonstrate how to build a Bluemix Cloud application to publish/subscribe
+              messages to on-prem MQ system, via Bluemix Secure Gateway. Check out the source code and detail at the
+            <a href = "https://github.com/ibm-cloud-architecture/integration-hybrid-messaging">github project</a>
+        </td>
+      </tr>
+    </table>
+    <br/><br/>
+    <div class="centered"><h3>Please enter a text message below to test the integration scenario</h3>
+    <input type="search" class="centered bx--search__input search-bar"
+    id="search__input" placeholder="Enter a message to publish">
+    <button class="createButton bx--footer--config__submit-btn bx--btn">Send Message</button>
+  </div>
+
+
+
+<!--    <button type="button"
             onclick="window.location.href='.'"
             style="margin-left:auto;margin-right:auto;display:block">
       Send MQ Message
-    </button>
+    </button> -->
+
   </body>
 
 </html>

@@ -80,3 +80,94 @@ pre {
 	margin: 0;
 }
 
+/*
+element.style {
+}
+search-bar .bx--search__input.full {
+    display: inherit;
+}
+search-bar .bx--search__input.full {
+    display: none;
+}
+search-bar .bx--search__input {
+    line-height: 1.125rem;
+}
+search-bar .bx--search__input {
+    line-height: 1rem;
+}
+.bx--search__input {
+    font-size: 1rem;
+}
+*/
+.bx--search__input {
+		width: 43%;
+    font-size: 0.875rem;
+    padding: 1rem 1rem 1rem 2.5rem;
+    color: #fff;
+    background-color: rgba(255,255,255,0.1);
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 1;
+}
+/*
+search-bar .bx--search {
+    font-size: 1rem;
+}
+
+search-bar .bx--search {
+    font-size: .9375rem;
+}
+search-bar .bx--search {
+    position: relative;
+    margin: 2rem;
+		margin-right: 10rem;
+    font-size: 1rem;
+}
+*/
+
+.centered {
+  position: fixed; /* or absolute */
+  left: 40%;
+	margin-left: -100px;
+}
+
+
+
+.bx--btn {
+	  float: left;
+	  min-width: 16.5em;
+    font-family: 'IBM Helvetica', Helvetica Neue, HelveticaNeue, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+		margin-top: 5em;
+    letter-spacing: .5px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: inline-block;
+    height: 2.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    color: #152935;
+    background-color: #5aaafa;
+    border: 2px solid transparent;
+}
+
+.cloudOEStoreFront {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    line-height: 1;
+    font-weight: 400;
+    background-color: #0f212e;
+}
