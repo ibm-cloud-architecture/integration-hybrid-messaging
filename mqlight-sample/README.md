@@ -14,6 +14,8 @@ Install a version of MQ on the SoftLayer VM that supports AMQP.
 Create and start a Queue Manager.
 Create and start the AMQP service.
 
+More information here https://www.ibm.com/support/knowledgecenter/SSFKSJ_8.0.0/com.ibm.mq.ins.doc/q008250_.htm
+
 ## Setup the Secure Gateway client on SoftLayer
 
 1. FTP Secure Gateway Client installation package to /tmp directory
@@ -24,19 +26,27 @@ Create and start the AMQP service.
    2. node lib/secgwclient.js <gateway-id> --t <security-token>
    3. acl allow :5672
 
+## Setup a Secure Gateway service on Bluemix
+
+1. From the Bluemix Catalog, select Secure Gateway
+2. Click CREATE
+3. ADD GATEWAY
+4. Name GatewayToLocalMQ
+5. Add a destination, named OnPremMQ
+   * On-premises
+   * SoftLayer VM's IP address
+   * Port 5672
+   * Using TCP
+6. When the Secure gateway client on the SoftLayer VM is started, the gateway will show as connected.
+
 ## Run the app on Bluemix
 
 1. Download and extract the code
 2. cd into the app directory
 3. cf push mqlight-sample
-4. Create a Secure Gateway service, and define a gateway to connect to the
-   remote MQ server, using:
-   * The SoftLayer VM's IP address
-   * Port 5672
-   * A userid and password with access to the SoftLayer VM
-5. Add the following environment variables to the sample app:
+4. Add the following environment variables to the sample app:
    * MQ_SERVER: The secure gateway’s cloud host
    * MQ_PORT: The secure gateway’s cloud port
    * MQ_USER: user
    * MQ_PASSWORD: password
-6. Bind the Secure Gateway service to the CF app
+5. Bind the Secure Gateway service to the CF app
