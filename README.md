@@ -16,16 +16,6 @@ Create and start the AMQP service.
 
 More information here https://www.ibm.com/support/knowledgecenter/SSFKSJ_8.0.0/com.ibm.mq.ins.doc/q008250_.htm
 
-## Setup the Secure Gateway client on SoftLayer
-
-1. FTP Secure Gateway Client installation package to /tmp directory
-2. cd /tmp
-3. rpm -ivhf <file-name>.rpm
-4. Start the client (after defining the Secure Gateway on Bluemix):
-   1. cd /opt/ibm/securegateway/client
-   2. node lib/secgwclient.js <gateway-id> --t <security-token>
-   3. acl allow :5672
-
 ## Setup a Secure Gateway service on Bluemix
 
 1. From the Bluemix Catalog, select Secure Gateway
@@ -37,7 +27,17 @@ More information here https://www.ibm.com/support/knowledgecenter/SSFKSJ_8.0.0/c
    * SoftLayer VM's IP address
    * Port 5672
    * Using TCP
-6. When the Secure gateway client on the SoftLayer VM is started, the gateway will show as connected.
+
+## Setup the Secure Gateway client on SoftLayer
+
+1. FTP Secure Gateway Client installation package to /tmp directory
+2. cd /tmp
+3. rpm -ivhf [file-name].rpm
+4. Start the client (after defining the Secure Gateway on Bluemix):
+   1. cd /opt/ibm/securegateway/client
+   2. node lib/secgwclient.js [gateway-id] --t [security-token]
+   3. acl allow :5672
+5. After the Secure gateway client is started, the Secure Gateway on Bluemix will show as connected.
 
 ## Run the app on Bluemix
 
@@ -47,6 +47,6 @@ More information here https://www.ibm.com/support/knowledgecenter/SSFKSJ_8.0.0/c
 4. Add the following environment variables to the sample app:
    * MQ_SERVER: The secure gateway’s cloud host
    * MQ_PORT: The secure gateway’s cloud port
-   * MQ_USER: user
-   * MQ_PASSWORD: password
+   * MQ_USER: A VM userid
+   * MQ_PASSWORD: The associated VM password
 5. Bind the Secure Gateway service to the CF app
