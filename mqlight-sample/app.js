@@ -55,15 +55,18 @@ sendClient.on('message', function(data, delivery) {
                                                         , delivery.message.ttl);
 });
 
-app.get('/', function(req, res, next) {
+app.get('/api/message', function(req, res) {
+  var data = req.query.message;
   if(sendClient.state == 'started') {
-    var data = 'Hello World!'
+    //var data = 'Hello World!'
     console.log('Sending to: %s, data: %s', topic, data);
     sendClient.send(topic, data);
   } else {
     console.log('Message not sent, sendClient.state: %s', sendClient.state);
   }
-  next();
+  res.sendStatus(200);
+	res.end();
+	return;
 });
 
 // serve the files out of ./public as our main files

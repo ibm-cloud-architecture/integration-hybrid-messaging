@@ -160,6 +160,11 @@ search-bar .bx--search {
     border: 2px solid transparent;
 }
 
+.result {
+	margin-top: 5rem;
+	float: right;
+}
+
 .cloudOEStoreFront {
     margin: 0;
     padding: 0;
