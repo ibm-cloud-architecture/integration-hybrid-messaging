@@ -49,4 +49,3 @@ More information here https://www.ibm.com/support/knowledgecenter/SSFKSJ_8.0.0/c
    * MQ_PORT: The secure gateway’s cloud port
    * MQ_USER: A VM userid
    * MQ_PASSWORD: The associated VM password
-5. Bind the Secure Gateway service to the CF app
