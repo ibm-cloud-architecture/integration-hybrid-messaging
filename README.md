@@ -6,7 +6,7 @@ This project provides an end-to-end reference implementation to demonstrate how 
 
 The project also provides a simple Node.js application that publishes and subscribes to the MQ topics via MQLite protocol. It is deployed to Bluemix as a Cloud Foundry application.
 
-TO-DO: Add an solution overview diagram.
+![Hybrid Messaging Architecture Overview](static/imgs/hybrid_messaging.png?raw=true)
 
 ## Setup the MQ on SoftLayer
 
